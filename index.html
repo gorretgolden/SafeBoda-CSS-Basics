@@ -4,107 +4,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to CSS</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Layout Demo - Safeboda</title>
 
-    <!-- Internal CSS: Style tags in play -->
-    <!-- <style>
-        body {
-            background-color: rgb(223, 252, 223);
+    <style>
+        /* Universal Selector: This applies to all elements in the document */
+        /* Remove the default margin and padding from the body  */
+
+        * {
+            margin: 0;
+            padding: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        h3 {
-            font-size: 28px;
-            text-decoration: underline;
-            text-align: center;
-            color: rgb(14, 14, 219);
-        }
-
-        button {
-            /* border: none; */
-            border: 2px solid rgb(235, 235, 158);
-            background-color: green;
-            color: white;
-            padding: 10px;
-            border-radius: 25px;
-
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: rgb(248, 236, 219); */
+            width: 90%;
+            margin: auto;
+            padding: 6px 10px;
 
         }
 
-        .btn-2 {
+        /* .navlinks-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            align-items: center;
+
+        } */
+
+        .navlinks ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            padding: 0px;
+            margin: 0px;
+            gap: 20px;
+
+        }
+
+
+        .navlinks ul a {
+            text-decoration: none;
+            color: #757575;
+            font-size: 16px;
+            letter-spacing: 0.25px;
+            cursor: pointer;
+            /* padding-left: 8px;
+            padding-right: 8px; */
+            font-weight: 600;
+        }
+
+        .navlinks ul a:hover {
+            font-weight: 600;
+            color: orange;
+
+        }
+
+        .nav-img {
+            border: 2px solid orange;
+            border-radius: 30px;
+        }
+
+        .btn-download {
             border: 2px solid orange;
             color: orange;
-            background-color: white;
-            padding: 10px;
+            background-color: rgb(248, 236, 219);
+            /* padding: 10px; */
             border-radius: 5px;
 
         }
 
-        .btn-2:hover {
+        /* 
+        .navlinks {
+            padding:4px 4px;
 
+        } */
+
+        .navlinks-center {
+            /* flex: 2; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+
+        }
+
+        .btn-download-right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-download-right button {
+            border: 2px solid orange;
+            color: orange;
+            background-color: white;
+            padding: 12px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-download-right button:hover {
             color: white;
             background-color: orange;
         }
 
-        p {
-            font-size: 18px;
-            color: blue
-        }
-        .buttons {
-            text-align: center;
-           
-        }
-    </style> -->
+        .logo-left {
+            flex: 1;
 
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background-image: url('https://cdn.prod.website-files.com/630c89e33df16d6893e94a91/630d3264fe029cced0c98006_HeroBG.svg');
+            /* Background image set to Cover */
+            background-size: cover;
+            
+        }
+
+        .hero-heading {
+            font-size: 55px;
+            color: orange;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .hero-p {
+            /* font-family: Asap, sans-serif; */
+            font-size: 26px;
+            /* line-height: 140%; */
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Safeboda Website Layout Demo -->
 
-    <!-- CSS LOGO -->
-    <div style="text-align: center;">
-        <img style="width:80px;height:80px"
-            src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo">
+    <!-- Navigation Bar:This is placed at the top -->
+    <div class="navbar">
+
+        <!-- Image: Safeboda Logo -->
+        <div class="logo-left">
+            <img src="https://cdn.prod.website-files.com/630c89e33df16d6893e94a91/630d07362115daab7eefe2a9_Full%20Logo.svg"
+                alt="Safeboda Logo" style="width: 150px; height: 150px;">
+        </div>
+
+
+
+        <!-- Navigation Links Center -->
+
+        <div class="navlinks-center">
+            <!-- Main Navigation Links -->
+
+            <div class="navlinks">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Safeboda for Business</a></li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Blog</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Join Us</a></li>
+
+                </ul>
+
+
+            </div>
+
+            <!-- Country Images -->
+            <div class="navlinks-country-picker">
+                <a href="https://safeboda.com/home-ug">
+                    <img class="nav-img"
+                        src="https://cdn.prod.website-files.com/630c89e33df16d6893e94a91/692ee8779d82707cb4f6dfc9_KLA.svg"
+                        alt="Uganda Flag" style="width: 50px; height: 30px;">
+
+                </a>
+
+
+                <a href="https://safeboda.com/home-ke">
+                    <img class="nav-img"
+                        src="https://cdn.prod.website-files.com/630c89e33df16d6893e94a91/65b125386685c718052dc121_NBO%20Flag.svg"
+                        alt="">
+                </a>
+            </div>
+
+
+        </div>
+
+
+        <!-- Download Button -->
+        <div class="btn-download-right">
+
+            <button>DOWNLOAD APP</button>
+        </div>
+
+
+
+
+
 
     </div>
 
 
-    <h3 style="font-size:28px;text-decoration:underline;text-align:center;">INTRODUCTION TO CSS</h3>
 
-    <!-- Start learning button -->
-    <div class="buttons">
-        <button>Start Learning</button>
+    <!-- Hero Section -->
+    <section class="hero-section">
 
-        <button class="btn-2">DOWNLOAD APP</button>
-    </div>
-
-    <h4>What is CSS?</h4>
-    <p>CSS stands for Cascading Style Sheets.
-        It is a style sheet language used for describing the presentation of a
-        document written in HTML or XML. CSS defines how elements should
-        be displayed on screen, paper, or in other media.
-    </p>
-    <h4>Why use CSS?</h4>
-    <p>CSS is used to control the style of a web document in a simple and easy way.
-        CSS saves a lot of work. It can control the layout of multiple web pages all at once.
-        External stylesheets are stored in CSS files.
-        This allows you to change the look of an entire website by changing just one file!
-    </p>
-
-    <h4>CSS Syntax</h4>
-    <p>CSS is made up of selectors and declaration blocks. A selector points to the HTML element you want to style.
-        The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS
-        property name and a value, separated by a colon.
-    </p>
-    <h4>CSS Application Approaches</h4>
-    <p>There are three ways of inserting a style sheet:</p>
-    <ol>
-        <li>Inline - by using the style attribute inside HTML elements</li>
-        <li>Internal - by using a style element in the head section</li>
-        <li>External - by using an external CSS file</li>
-    </ol>
+        <!-- Content -->
+        <div class="hero-content">
+            <h1 class="hero-heading">SafeBoda</h1>
+            <p class="hero-p">Driving Africa forward by transforming transportation and delivery services to be safe,
+                affordable, and
+                reliable.</p>
+            <p>Download App</p>
+            <!-- 
+            Images -->
+            <div>
+                <img src="https://cdn.prod.website-files.com/630c89e33df16d6893e94a91/630d1cdb6a1b2f1f5e934c21_Google%20Play%20BTN.svg"
+                    alt="Google Play Store" style="width: 150px; height: 50px;">
+                <img
+                    src="https://cdn.prod.website-files.com/630c89e33df16d6893e94a91/630d1cdb1a3a0351fb1ec4ea_App%20Store%20BTN.svg" />
+            </div>
 
 
+        </div>
+
+
+        <!-- Image -->
+        <div class="hero-image">
+            <img style="width:80vh; height: 50vh;" alt="Safeboda Hero Image"
+                src="https://cdn.prod.website-files.com/630c89e33df16d6893e94a91/638479802fb3c683b95310e1_Country%3DNG%2C%20Version%3D02.png" />
+        </div>
+
+
+
+
+    </section>
 
 </body>
 
